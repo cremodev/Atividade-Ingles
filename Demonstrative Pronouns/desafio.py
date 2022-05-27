@@ -1,15 +1,15 @@
 '''
-Codigo de perguntas e respostas para aprimorar o aprendizado dos Pronomes 
-Demonstrativos (Demonstrative Pronouns)
+Crie um sistema de perguntas e respostas que interage com o usuário, 
+pedindo que o mesmo insira uma resposta. 
+Caso a primeira questão esteja correta, exiba em tela uma mensagem de acerto 
+e para para a proxima pergunta, caso incorreta, 
+exiba uma mensagem de erro e pule para a proxima pergunta. Dicts.
 '''
 import pandas as pd
 from random import choice
 
 url_file = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTYnk1dsVTyXxx9-2mbarCEayKhozmJMFoLH3mTE7gl_mL2uZBrHuEXudqUuAxpzcNHxMNagLMDmpON/pub?output=csv'
-'''
-Arquivo no Google Drive com Perguntas e Respostas genericas e especificas sobre 
-Dicionarios
-'''
+
 def importa_planilha(colunas):
     return pd.read_csv(url_file, index_col=0, header=0, usecols=colunas).to_dict('index')
 
@@ -18,6 +18,7 @@ colunas = list(['ID', 'Perguntas', 'Respostas'])
 dd = importa_planilha(colunas)
 
 colunas.remove('ID')
+
 resp_pron = 0
 
 while resp_pron == 0:
