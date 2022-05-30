@@ -39,16 +39,13 @@ while resp != '999':
     pergunta = uma_pergunta['Perguntas']
     resposta_certa = uma_pergunta['Respostas']
 
-    #ln()
     print(pergunta)
     ln()
 
     resposta_certa = str(resposta_certa).strip().upper()
-    # print("Resposta certa é:", resposta_certa)
     resp = input("Answer with the proper pronoun or type 999 to exit: ").strip().title()
     resp = str(resp).strip().upper()
 
-    # print('Resposta digitada foi: ', resp)
 
     ln()
     if resp == resposta_certa:
