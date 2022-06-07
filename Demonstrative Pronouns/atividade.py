@@ -52,7 +52,7 @@ while resp != '999':
         resp_pron += 1
         print(f"\033[1;32mCONGRATS YOU ALREADY GET {resp_pron} ANSWERS RIGHT\033[m")
     else:
-        print("\033[1;31mWHAT A PITY ... GOOD LUCK NEXT TIME\033[m")
+        print("\033[1;31mWHAT A SHAME ... GOOD LUCK NEXT TIME\033[m")
 
     ln()
 
